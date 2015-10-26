@@ -82,8 +82,6 @@ app.all('*', (req, res) => {
                     return <Component {...props} />;
                 };
 
-
-                console.log('!!! ', req.cryptoGemMessage);
                 res.render(
                     'index',
                     {

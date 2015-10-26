@@ -11,8 +11,4 @@ WriteMessage({
     message: 'the titanic was a big ship',
     password: '123'
 })
-.then(
-    console.log,
-    console.error
-);
 

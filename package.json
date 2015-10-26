@@ -6,10 +6,13 @@
     "body-parser": "^1.14.1",
     "bunyan": "^1.5.1",
     "bunyan-format": "^0.2.1",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
     "history": "^1.12.5",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
     "react-router": "^1.0.0-rc3",
+    "sjcl": "^1.0.3",
     "uuid": "^2.0.1"
   },
   "devDependencies": {

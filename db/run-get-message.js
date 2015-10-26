@@ -8,7 +8,4 @@ GetMessage({
     logger
 })('cool')
     .then(data => data.message)
-    .then(
-        console.log
-    );
 
