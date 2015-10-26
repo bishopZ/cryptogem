@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+   <meta name="apple-mobile-web-app-capable" content="yes" />
+   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+
+  <title>CryptoGem</title>
+  <style>
+      html, body, #container {
+          height: 100%;
+      }
+
+      html, body, div, form, fieldset, legend, label {
+          margin: 0;
+          padding: 0; 
+      }
+
+      table
+      {
+          border-collapse: collapse;
+          border-spacing: 0;
+      }
+
+      th, td
+      {
+          text-align: left;
+          vertical-align: top;
+      }
+
+      h1, h2, h3, h4, h5, h6, th, td, caption { font-weight:normal; }
+
+    img { border: 0; }
+  </style>
+
+</head>
+
+<div id="container"><%- component %></div>
+
+<script>
+    window.message = <%- JSON.stringify(message) %>;
+</script>
+
+<script src="/index.js"></script>
