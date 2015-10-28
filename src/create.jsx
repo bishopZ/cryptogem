@@ -20,31 +20,37 @@ export default React.createClass({
         }
         return (
             <form action='/save' method='POST'>
-                <p>
-                    <label htmlFor='title'>Title:</label>
-                    <input type='text' name='title'
-                        value={this.state.title}
-                        onChange={this.handleTitleChange} />
-                </p>
+                <ul className='input-group'>
+                    <li className='input-item'>
+                        <label htmlFor='title'>Title:</label>
+                        <input type='text' name='title'
+                            value={this.state.title}
+                            onChange={this.handleTitleChange} />
+                    </li>
 
-                <p>
-                    <label htmlFor='message'>Message:</label>
-                    <textarea name='message'
-                        value={this.state.message}
-                        onChange={this.handleMessageChange} />
-                </p>
+                    <li className='input-item'>
+                        <label htmlFor='message'>Message:</label>
+                        <textarea name='message'
+                            value={this.state.message}
+                            onChange={this.handleMessageChange} />
+                    </li>
 
-                <p>
-                    <label htmlFor='password'>Password:</label>
-                    <input type='password'
-                        name='password'
-                        value={this.state.password}
-                        onChange={this.handlePasswordChange} />
-                </p>
+                    <li className='input-item'>
+                        <label htmlFor='password'>Password:</label>
+                        <input type='password'
+                            name='password'
+                            value={this.state.password}
+                            onChange={this.handlePasswordChange} />
+                    </li>
+                    
+                    <li className='input-item'>
+                        <p>{encrypted}</p>
+                    </li>
 
-                <p>{encrypted}</p>
-
-                <button>Submit</button>
+                    <li className='input-item'>
+                        <button>Submit</button>
+                    </li>
+                </ul>
             </form>
         );
     },
