@@ -10,6 +10,9 @@
 
 
   <title>CryptoGem</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css'>
+
   <style>
       html, body, #container {
           height: 100%;
@@ -17,7 +20,12 @@
 
       html, body, div, form, fieldset, legend, label {
           margin: 0;
-          padding: 0; 
+          padding: 0;
+      }
+
+      body {
+          font-family: "Karla", sans-serif;
+          letter-spacing: 0.1em;
       }
 
       table
@@ -34,15 +42,46 @@
 
       h1, h2, h3, h4, h5, h6, th, td, caption { font-weight:normal; }
 
+      a {
+          color: #333;
+          text-decoration: none;
+      }
+
     img { border: 0; }
 
+    input {
+        height: 30px;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    button {
+        height: 60px;
+        background-color: #444;
+        border: none;
+        color:#fff;
+        text-decoration:none;
+    }
+
     .input-group {
+        width: 33.333333334%;
+        margin: 10% auto 0 auto;
         display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .input-item {
-        display: inline-block; //Safari
-        flex:1;
+        margin-bottom: 3%;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .center-text {
+        text-align: center;
     }
 
   </style>

@@ -13,4 +13,3 @@ export default ({ children }) =>
             {children}
         </main>
     </div>;
-

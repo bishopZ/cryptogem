@@ -20,37 +20,38 @@ export default React.createClass({
         }
         return (
             <form action='/save' method='POST'>
-                <ul className='input-group'>
-                    <li className='input-item'>
-                        <label htmlFor='title'>Title:</label>
-                        <input type='text' name='title'
-                            value={this.state.title}
-                            onChange={this.handleTitleChange} />
-                    </li>
+                <div className='input-group'>
+                        <div className='input-item'>
+                            <label htmlFor='title'>Title:</label>
+                            <input type='text' name='title'
+                                value={this.state.title}
+                                onChange={this.handleTitleChange} />
+                        </div>
 
-                    <li className='input-item'>
-                        <label htmlFor='message'>Message:</label>
-                        <textarea name='message'
-                            value={this.state.message}
-                            onChange={this.handleMessageChange} />
-                    </li>
+                        <div className='input-item'>
+                            <label htmlFor='message'>Message:</label>
+                            <textarea  name='message'
+                                value={this.state.message}
+                                onChange={this.handleMessageChange}
+                                onKeyUp={this.handleTextareaExpand} />
+                        </div>
 
-                    <li className='input-item'>
-                        <label htmlFor='password'>Password:</label>
-                        <input type='password'
-                            name='password'
-                            value={this.state.password}
-                            onChange={this.handlePasswordChange} />
-                    </li>
-                    
-                    <li className='input-item'>
-                        <p>{encrypted}</p>
-                    </li>
+                        <div className='input-item'>
+                            <label htmlFor='password'>Password:</label>
+                            <input  type='password'
+                                name='password'
+                                value={this.state.password}
+                                onChange={this.handlePasswordChange} />
+                        </div>
 
-                    <li className='input-item'>
-                        <button>Submit</button>
-                    </li>
-                </ul>
+                        <div className='input-item center-text wrap-text'>
+                            <p>{encrypted}</p>
+                        </div>
+
+                        <div className='input-item'>
+                            <button>Submit</button>
+                        </div>
+                    </div>
             </form>
         );
     },
@@ -81,6 +82,11 @@ export default React.createClass({
         } catch(e) {};
 
         this.setState({ password: value, encrypted });
+    },
+
+    handleTextareaExpand({ target }) {
+        target.style.overflow = 'hidden';
+        target.style.height = 'auto';
+        target.style.height = target.scrollHeight + 'px';
     }
 });
-
